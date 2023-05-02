@@ -1,0 +1,15 @@
+name: InvTimer
+version: '${project.version}'
+main: org.by1337.invtimer.InvTimer
+api-version: 1.16
+depend: [BAirDrop]
+authors: [By1337]
+commands:
+  itimer:
+    description: Standart Command
+    aliases: [timer, inv]
+    usage: Usage /timer reload
+permissions:
+  timer.reload:
+    description: /timer reload
+    default: op

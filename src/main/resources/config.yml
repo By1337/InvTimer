@@ -1,0 +1,8 @@
+open-time: 30 #время открытия
+material: BLACK_STAINED_GLASS_PANE
+item-name: '&7Осталось: {time}'
+item-lore: []
+
+#Список аирдропов которые будут открываться смотря в меню
+airdrops:
+  - 'default'
