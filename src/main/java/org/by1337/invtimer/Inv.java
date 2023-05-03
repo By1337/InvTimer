@@ -82,7 +82,6 @@ public class Inv implements Listener {
     public void close(InventoryCloseEvent e){
         HandlerList.unregisterAll(this);
         Bukkit.getServer().getScheduler().cancelTask(taskId);
-        Bukkit.getServer().getConsoleSender().sendMessage("ok!");
     }
     @EventHandler
     public void end(AirDropEndEvent e){
@@ -90,7 +89,6 @@ public class Inv implements Listener {
             HandlerList.unregisterAll(this);
             Bukkit.getServer().getScheduler().cancelTask(taskId);
             player.closeInventory();
-            Bukkit.getServer().getConsoleSender().sendMessage("ok!");
         }
     }
     @EventHandler
