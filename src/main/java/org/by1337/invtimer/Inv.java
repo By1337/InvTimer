@@ -36,7 +36,7 @@ public class Inv implements Listener {
     public Inv(AirDrop airDrop, Player player) {
         this.airDrop = airDrop;
         this.player = player;
-        inventory = Bukkit.createInventory(null, 27, "timer");
+        inventory = Bukkit.createInventory(null, 27, Message.messageBuilder(InvTimer.instance.getConfig().getString("inv-name")));
         Bukkit.getServer().getPluginManager().registerEvents(this, InvTimer.instance);
         generate();
     }
@@ -47,7 +47,7 @@ public class Inv implements Listener {
                 if(time == 0){
                     if(!airDrop.isItWasOpen()){
                         airDrop.event(Event.getByKey(NamespacedKey.fromString("player_first_open_inv")), player);
-                        airDrop.setItWasOpen(false);
+                        airDrop.setItWasOpen(true);
                     }else {
                         airDrop.event(Event.getByKey(NamespacedKey.fromString("player_open_inv")), player);
                     }
